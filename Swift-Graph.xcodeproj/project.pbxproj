@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		92A6E23C248DEDEE000F4F54 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6E23B248DEDEE000F4F54 /* main.swift */; };
+		92A6E261248DEEBB000F4F54 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6E260248DEEBB000F4F54 /* Graph.swift */; };
+		92A6E262248DEEBB000F4F54 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6E260248DEEBB000F4F54 /* Graph.swift */; };
+		92A6E264248DEF1F000F4F54 /* GraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6E263248DEF1F000F4F54 /* GraphTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,10 +29,21 @@
 		92A6E238248DEDEE000F4F54 /* Swift-Graph */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Swift-Graph"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A6E23B248DEDEE000F4F54 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		92A6E253248DEE5B000F4F54 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		92A6E258248DEEAF000F4F54 /* GraphTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A6E25C248DEEAF000F4F54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92A6E260248DEEBB000F4F54 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		92A6E263248DEF1F000F4F54 /* GraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		92A6E235248DEDEE000F4F54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A6E255248DEEAF000F4F54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,6 +58,7 @@
 			children = (
 				92A6E253248DEE5B000F4F54 /* .gitignore */,
 				92A6E23A248DEDEE000F4F54 /* Swift-Graph */,
+				92A6E259248DEEAF000F4F54 /* GraphTests */,
 				92A6E239248DEDEE000F4F54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				92A6E238248DEDEE000F4F54 /* Swift-Graph */,
+				92A6E258248DEEAF000F4F54 /* GraphTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +76,18 @@
 			isa = PBXGroup;
 			children = (
 				92A6E23B248DEDEE000F4F54 /* main.swift */,
+				92A6E260248DEEBB000F4F54 /* Graph.swift */,
 			);
 			path = "Swift-Graph";
+			sourceTree = "<group>";
+		};
+		92A6E259248DEEAF000F4F54 /* GraphTests */ = {
+			isa = PBXGroup;
+			children = (
+				92A6E25C248DEEAF000F4F54 /* Info.plist */,
+				92A6E263248DEF1F000F4F54 /* GraphTests.swift */,
+			);
+			path = GraphTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +110,23 @@
 			productReference = 92A6E238248DEDEE000F4F54 /* Swift-Graph */;
 			productType = "com.apple.product-type.tool";
 		};
+		92A6E257248DEEAF000F4F54 /* GraphTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92A6E25D248DEEAF000F4F54 /* Build configuration list for PBXNativeTarget "GraphTests" */;
+			buildPhases = (
+				92A6E254248DEEAF000F4F54 /* Sources */,
+				92A6E255248DEEAF000F4F54 /* Frameworks */,
+				92A6E256248DEEAF000F4F54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GraphTests;
+			productName = GraphTests;
+			productReference = 92A6E258248DEEAF000F4F54 /* GraphTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +138,9 @@
 				ORGANIZATIONNAME = "Dan Mitu";
 				TargetAttributes = {
 					92A6E237248DEDEE000F4F54 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					92A6E257248DEEAF000F4F54 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -113,16 +159,37 @@
 			projectRoot = "";
 			targets = (
 				92A6E237248DEDEE000F4F54 /* Swift-Graph */,
+				92A6E257248DEEAF000F4F54 /* GraphTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92A6E256248DEEAF000F4F54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		92A6E234248DEDEE000F4F54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A6E261248DEEBB000F4F54 /* Graph.swift in Sources */,
 				92A6E23C248DEDEE000F4F54 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A6E254248DEEAF000F4F54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92A6E264248DEF1F000F4F54 /* GraphTests.swift in Sources */,
+				92A6E262248DEEBB000F4F54 /* Graph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +331,42 @@
 			};
 			name = Release;
 		};
+		92A6E25E248DEEAF000F4F54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DR8NB2Y6C4;
+				INFOPLIST_FILE = GraphTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danmitu.GraphTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		92A6E25F248DEEAF000F4F54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DR8NB2Y6C4;
+				INFOPLIST_FILE = GraphTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danmitu.GraphTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -281,6 +384,15 @@
 			buildConfigurations = (
 				92A6E240248DEDEE000F4F54 /* Debug */,
 				92A6E241248DEDEE000F4F54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92A6E25D248DEEAF000F4F54 /* Build configuration list for PBXNativeTarget "GraphTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92A6E25E248DEEAF000F4F54 /* Debug */,
+				92A6E25F248DEEAF000F4F54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

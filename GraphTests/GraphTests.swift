@@ -55,6 +55,7 @@ class GraphTests: XCTestCase {
         g.addEdge(from: v2, to: v3)
         g.addEdge(from: v3, to: v1)
         g.remove(v1)
+        XCTAssertFalse(g.vertices.contains(where: { $0 === v1 }))
         XCTAssert(v2.edgeList.count == 1)
         XCTAssert(v3.edgeList.count == 1)
     }
